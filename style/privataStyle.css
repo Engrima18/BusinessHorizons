@@ -1,0 +1,37 @@
+body{
+    background-color: #303134;
+}
+.contenitore{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.card{
+    margin:30px;
+}
+
+@media screen and (max-width:1200px){
+    .card{
+        flex-basis: 50%;
+    }
+}
+@media screen and (max-width:575px){
+    .card{
+        flex-basis: 100%;
+        margin: 4px;
+    }
+}
+
+h1{
+    color:#7CD556;
+    padding: 15px;
+    margin: 10px;
+}   
+
+a.card,
+a.card:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+

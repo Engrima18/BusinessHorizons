@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/styleForm.css"/>
+    <title>Registrazione</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script>
+        function testpass(modulo){
+          // Verifico che le due password siano uguali, in caso contrario avverto
+          // dell'errore con un Alert
+          if (myformSub.Inputpass.value != myformSub.InputpassR.value) {
+            alert("La password inserita non coincide con la prima!");
+            myformSub.Inputpass.focus();
+            myformSub.Inputpass.select();
+            return false
+          }
+          return true
+        }
+    </script>
+</head>
+
+<body class="text-center">
+
+    <div class="contenitore">
+        <h1 class="mb-3">Registrati</h1>
+        <div id="app" >
+            <form name="myformSub" action="submit.php" method="post" onsubmit="return testpass(this)" class="form-signin">
+                <label data-error="wrong" data-success="right" for="email" >Email</label>
+                <input type="email" name="Inputemail" class="form-control" 
+                    placeholder="Inserisci la tua email" required autofocus/>
+
+                <label data-error="wrong" data-success="right" for="passwd" >Password</label>
+                <div  class="pass">
+                    <input v-if="showPassword" type="text"  v-model="password" placeholder="Inserisci password" name="Inputpass" id="pass1" class="form-control">
+                    <input v-else type="password" v-model="password" placeholder="Inserisci password" name="Inputpass" id="pass1" class="form-control">
+                    <button id="show" type="button" class="btn btn-dark" @click="toggleShow">
+                    <i :class="{ 'bi bi-eye-slash-fill': showPassword, 'bi bi-eye-fill': !showPassword }"></i>
+                    </button>
+                </div>
+                    <div  class="pass">
+                    <input v-if="showPassword" type="text"  v-model="password2" placeholder="Ripeti password" name="InputpassR" id="pass2" class="form-control">
+                    <input v-else type="password" v-model="password2" placeholder="Ripeti password" name="InputpassR" id="pass2" class="form-control">
+                </div>
+                <label data-error="wrong" data-success="right" for="nome" >Nome</label>    
+                <input type="Nome" name="Inputnome" class="form-control" 
+                    placeholder="Inserisci il tuo nome" required />
+                <label data-error="wrong" data-success="right" for="cognome" >Cognome</label>
+                <input type="Cognome" name="Inputcognome" class="form-control" 
+                    placeholder="Inserisci il tuo Cognome" required />
+                <label data-error="wrong" data-success="right" for="username" >Username</label>               
+                <input type="Username" name="Inputuser" class="form-control" 
+                    placeholder="Inserisci il tuo Username" required />    
+                <button type="submit" class="btn btn-success" name="registrationButton">Invia</button> 
+            </form>
+        </div>
+    </div>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="/script/hidePass.js"></script>
+</body>
+</html>

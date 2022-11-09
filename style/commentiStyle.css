@@ -1,0 +1,178 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #303134;
+    text-align: center;
+}
+
+.contenitore {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .contenitore {
+        flex-wrap:wrap-reverse;
+    }
+    .cerca,.invia{
+        flex-basis:100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .nnda-logo{
+        display:none;
+    }
+}
+#Ricerca{
+    background-color: #303134;
+    max-height: 50px;
+    color:aliceblue;
+}
+#Ricerca:focus{
+    background-color: #303134;
+    border: solid 1px;
+    border-color: #7CD556;
+    color:aliceblue;
+    box-shadow:  0 5px 5px #7CD556;
+  }
+@media screen and (min-width: 800px) {
+    #Ricerca{
+        width: 60%;
+    }
+}
+
+
+h1{   
+    color:#7CD556;
+    padding: 15px;
+    margin: 10px;
+}
+h2{   
+    color:#7CD556;
+    padding: 10px;
+    font-style: italic;
+}
+.descr{
+    color: rgba(255, 255, 255, 0.332);
+    padding:7px;
+    font-style: italic;
+    text-align: center;
+}
+.lineasup{
+    color: #FFF;
+    margin: 15px;
+}
+.cerca{
+    display: flex;
+    flex-basis: 60%;
+    margin:10px;
+}
+.invia{
+    display: flex;
+    flex-basis: 35%;
+    margin:10px;
+    justify-content:center;
+    align-items: center;
+}
+
+.commentButton{
+    display:inline-block;
+    padding:0.5em 1.7em;
+    border:0.25em solid #7CD54D;
+    margin:0.1em 0.2em;
+    border-radius:0.35em;
+    box-sizing: border-box;
+    font-family:"arial";
+    color:#7CD54D;
+    text-align:center;
+    transition: 0.2s;
+    background:transparent;
+    cursor:pointer;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.commentButton:hover{
+    background-color: #7CD54D;
+    color: #FFF;
+}
+
+#searchForm{
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    flex-basis: 100px;
+}
+.btn{
+    margin-bottom: 15px;
+}
+.commenti{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.single-comment{
+    width: 70%;
+    border-radius: 10px;
+    background-color: #1b1c1d;
+    color: #FFF;
+    margin: 20px;
+    box-shadow: 0 5px 10px #7CD556;
+}
+.contenitore > .commenti > .single-comment{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #1b1c1d;
+    color: #FFF;
+    margin: 20px;
+    box-shadow: 0 5px 10px #7CD556;
+}
+.contenitore > .commenti{
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+    .single-comment{
+        width: 90%;
+    }
+}
+
+.aziendaComm, .userComm, .comm{
+    padding:7px;
+    font-style: italic;
+}
+.comm{
+    color:#FFF;
+}
+.aziendaComm{
+    color:#7CD54D;
+    text-align: left;
+    display: inline-block;
+}
+.userComm{
+    color:#7CD54D;
+    text-align: left;
+    display: inline-block;
+}
+.single-comment > hr{
+    color: #7CD54D;
+    width: 90%;
+    margin: auto;
+}
+.likeSession, .deleteSession{
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+.likeButton, .deleteButton{
+    background-color:#1b1c1d;
+    color:#7CD54D;
+    border:none;
+}
+.likes{
+    margin-bottom: 0px ;
+}
